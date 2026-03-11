@@ -23,26 +23,18 @@
                 name="q" alt="Search Google" onkeydown="if(event.keyCode === 13) { this.form.submit(); return false; }">
         </form>
 
-        <div id="iconList" class="card-columns mt-3">
-            <div id="iconListEntry" class="card">
-                <div class="card-body cursorPointer">
-                    <p class="card-text"><a href="#" target="_self" class="iconLink"><i class="fa-5x iconIcon"></i></a>
-                    </p>
-                    <p class="card-text"><a href="#" target="_self" class="iconLink">TEXT</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div id="groupList" class="card-deck mt-3">
-            <div id="groupListEntry" class="card">
+        <div id="tileGrid" class="tile-grid mt-4">
+            <a id="tileEntry" class="card tile-card" href="#" target="_self">
                 <div class="card-body">
-                    <h5 class="card-title groupTitle">GROUPNAME</h5>
-                    <ul class="list-group list-group-flush groupListList">
-                        <li class="list-group-item groupListListItem"><a href="#" target="_self" class="groupLink"><i
-                                    class="groupIcon"></i> <span class="groupText">TEXT</span></a></li>
-                    </ul>
+                    <div class="tile-icon-wrap">
+                        <i class="tileIcon"></i>
+                    </div>
+                    <div class="tile-text">
+                        <h5 class="tileTitle">TITLE</h5>
+                        <p class="tileMeta mb-0">META</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </main>
 

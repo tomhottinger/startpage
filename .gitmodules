@@ -1,0 +1,3 @@
+[submodule "tomsbookmarks"]
+	path = tomsbookmarks
+	url = https://git.t71.ch/tom/tomsbookmarks.git

@@ -18,12 +18,101 @@ h1 {
 }
 
 .card {
-    opacity: 0.7;
+    opacity: 0.88;
+    border: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
 .card:hover {
     opacity: 1;
 }
 
 .cursorPointer:hover {
     cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#search-form {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.tile-card {
+    min-height: 92px;
+    text-decoration: none;
+    color: #1f1f1f;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.tile-card:hover {
+    text-decoration: none;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+}
+
+.tile-card .card-body {
+    min-height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    padding: 12px 14px;
+}
+
+.tile-icon-wrap {
+    width: 18px;
+    min-width: 18px;
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.tileTitle {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    word-break: break-word;
+}
+
+.tileMeta {
+    margin-top: 4px;
+    font-size: 0.78rem;
+    color: #666666;
+}
+
+.tileIcon {
+    font-size: 0.85rem !important;
+}
+
+.tile-text {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 991px) {
+    .tile-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .tile-grid {
+        grid-template-columns: 1fr;
+    }
 }
